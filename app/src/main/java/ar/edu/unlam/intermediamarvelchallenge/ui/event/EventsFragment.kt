@@ -46,7 +46,7 @@ class EventsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.progressBar.isVisible()
         setupEventList()
-        adapter.notifyDataSetChanged()
+        
 
     }
 

@@ -2,15 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
     tools:context=".ui.character.CharacterDetailActivity">
-    <data>
-        <variable name="img"
-            type="ar.edu.unlam.intermediamarvelchallenge.data.models.Thumbnail" />
-    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
          android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/darkGrey"
         android:background="@color/darkGrey">
         <LinearLayout
@@ -42,7 +38,10 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
 
 <androidx.cardview.widget.CardView
     android:id="@+id/container_character_detail"
@@ -51,7 +50,8 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/toolbar"
     android:backgroundTint="@color/darkGrey"
-    app:layout_constraintEnd_toEndOf="parent">
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginBottom="70dp">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -101,8 +101,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="10dp"
         tools:itemCount="5"
+        android:layout_marginBottom="100dp"
         tools:listitem="@layout/view_comic_item"
-        app:layout_constraintTop_toBottomOf="@id/appears"/>
+        app:layout_constraintTop_toBottomOf="@id/appears" />
     <TextView
         android:id="@+id/empty_recycler"
         android:layout_width="match_parent"
