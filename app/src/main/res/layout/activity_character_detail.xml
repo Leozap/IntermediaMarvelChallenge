@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".ui.character.CharacterDetailActivity">
+    <data>
+        <variable name="img"
+            type="ar.edu.unlam.intermediamarvelchallenge.data.models.Thumbnail" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/darkGrey"
+        android:background="@color/darkGrey">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:orientation="horizontal"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@color/black"
+                android:src="@drawable/close"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_margin="10sp"
+                android:id="@+id/name_character"
+                tools:text="Thanos"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/container_character_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar"
+    android:backgroundTint="@color/darkGrey"
+    app:layout_constraintEnd_toEndOf="parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<androidx.appcompat.widget.AppCompatImageView
+    android:id="@+id/image_character_thumbnail_detail"
+    android:layout_width="300dp"
+    android:layout_height="350dp"
+    android:layout_marginTop="30dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    />
+
+    <TextView
+        android:id="@+id/character_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_character_thumbnail_detail"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        tools:text="Using thhe powers of the infinity stones, Thanos believes he can ultimately save the universe by wiping out half of its population."
+/>
+    <TextView
+        android:id="@+id/appears"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/character_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="APPEARS IN THESE COMICS"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_comics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        tools:itemCount="5"
+        tools:listitem="@layout/view_comic_item"
+        app:layout_constraintTop_toBottomOf="@id/appears"/>
+    <TextView
+        android:id="@+id/empty_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/appears"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:text="@string/sorry_no_data_available"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

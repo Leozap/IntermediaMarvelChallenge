@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Marvel App</string>
+    <string name="facebook">Facebook</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="cancel">login has been canceled</string>
+    <string name="facebook_app_id">965032424312646</string>
+    <string name="fb_login_protocol_scheme">fb965032424312646</string>
+    <string name="marvel_challenge">MARVEL CHALLENGE</string>
+    <string name="m">M</string>
+    <string name="error">This combination of Email and Password in not correct. Please retry.</string>
+    <string name="passwordSmall">The password must contain at least 6 characters</string>
+    <string name="title_characters">Characters</string>
+    <string name="title_events">Events</string>
+    <string name="day_of_month_year">2021/08/23</string>
+    <string name="event_name">Event Name</string>
+    <string name="issue_year_sample">1990</string>
+    <string name="issue_title_sample">Avengers (1963) #125</string>
+    <string name="ok">load success</string>
+    <string name="bad">error in load</string>
+    <string name="no_name_message">Name data not found</string>
+    <string name="no_description_message">Description data not found</string>
+    <string name="sorry_no_data_available">Sorry, no data available</string>
+
+</resources>
