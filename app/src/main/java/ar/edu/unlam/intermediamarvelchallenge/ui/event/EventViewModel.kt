@@ -51,20 +51,7 @@ class EventViewModel(private val eventRepository: EventRepository) : ViewModel()
             }
         }
     }
-    /* fun loadMoreEvent(moreCharacters: Int) {
-         viewModelScope.launch {
-             when (val response = eventRepository.getEvents(moreCharacters)) {
-                 is NetResult.Success -> {
-                     _event.postValue(response.data.eventsList.events)
-                     statusEvent.value = Status.SUCCESS
-                 }
-                 is NetResult.Error -> {
-                     statusEvent.value = Status.ERROR
-                 }
-             }
 
-         }
-     }*/
 
 
 }

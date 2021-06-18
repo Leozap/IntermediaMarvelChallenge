@@ -16,8 +16,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-    var mainCharacterFrag=CharacterFragment()
-    var mainEventFrag=EventsFragment()
+    var mainCharacterFrag = CharacterFragment()
+    var mainEventFrag = EventsFragment()
     private val myOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             binding.bottomNavbar.itemIconTintList = null
@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavbar.setupWithNavController(navController)
         binding.bottomNavbar.itemIconTintList = null
         binding.bottomNavbar.setOnNavigationItemSelectedListener(myOnNavigationItemSelectedListener)
-
 
 
     }

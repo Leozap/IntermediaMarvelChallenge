@@ -46,28 +46,11 @@ class EventsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.progressBar.isVisible()
         setupEventList()
-        //setupPagination()
         adapter.notifyDataSetChanged()
 
     }
 
 
-    /*private fun setupPagination() {
-        binding.listEvents.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                if (!recyclerView.canScrollVertically(1)) {
-                    viewModel.loadMoreEvent(adapter.itemCount)
-                    viewModel.statusEvent.observe(viewLifecycleOwner,{status(it)})
-                }
-                super.onScrollStateChanged(recyclerView, newState)
-            }
-        })
-    }*/
-  /*  private fun showComics(){
-        if (binding.listEvents.visibility==View.VISIBLE){
-        binding.listEvents.visibility=View.GONE}
-        else{binding.listEvents.visibility=View.VISIBLE}
-    }*/
     private fun status(stat: Status) {
         when (stat) {
             Status.SUCCESS -> {Toast.makeText(this.context,
@@ -97,15 +80,5 @@ class EventsFragment : Fragment() {
 
         })
     }
- /*   private fun toggleLoading(hasResults:Boolean=false){
-        if(binding.progressBar.isVisible()){
-            binding.progressBar.hide()
-        }else {
-            binding.progressBar.show()
-        }
-        if(hasResults){
-            binding.listEvents.show()
-        }else{binding.listEvents.hide()}
 
-    }*/
 }
